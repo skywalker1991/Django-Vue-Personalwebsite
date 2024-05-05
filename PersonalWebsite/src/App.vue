@@ -1,47 +1,38 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <Navigator />
   </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <MainPage />
+
+
+  <foot>
+
+  </foot>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+
+<script setup>
+import Navigator from './components/head.vue';
+import MainPage from './components/MainPage.vue'
+
+
+
+</script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
 }
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  /* background: linear-gradient(to right, #105bb0 0%, #012043 100%); */
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 }
 </style>
