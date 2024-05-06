@@ -1,5 +1,6 @@
 <template>
-    <div class="title">
+    <div class="ColDisplay">
+        <div class="title">
         <p>{{ colTitle }}</p>
     </div>
     <div v-for="(col,index) in colData" :key="index" class="section">
@@ -23,6 +24,9 @@
 
 
     </div>
+
+    </div>
+
 </template>
 
 
@@ -44,6 +48,10 @@ export default {
 </script>
 
 <style>
+.ColDisplay {
+    background-color: #0d1116;
+    
+}
 .title {
     font-size: 30px;
     margin-left: 50px;
@@ -151,6 +159,7 @@ export default {
   animation-timeline: --subjectReveal;
   animation-name: slideInRight;
   animation-fill-mode: both;
+  animation-range: entry 70% entry 100%;
   
 }
 @keyframes appear {

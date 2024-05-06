@@ -10,10 +10,12 @@
     </div>
 
         <div class="row-display" :style="{ transform: `translateX(${positionX}px)` }">
-            <div v-for="(row,index) in rowData" :key="index" class="row">
-                <p>{{ row.imgurl }}</p>
-                <p>{{ row.title }}</p>
-                <p>{{ row.des }}</p>
+            <div v-for="(row,index) in rowData" :key="index" class="row" :style="{backgroundImage:'url('+row.imgurl+')'}">
+                <div class="card-text">
+                    <p class="card-title">{{ row.title }}</p>
+                    <p class="card-des">{{ row.des }}</p>
+                </div>
+
             </div>
         </div>
 
@@ -58,16 +60,35 @@ export default {
 </script>
 
 <style>
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card-title {
+    font-size: 45px;
+    padding: 15px;
+    margin: 0px;
+    
+}
+.card-des {
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top:0px;
+    /* text-align: justify; */
+}
 .RowDisplay {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: #0d1116;
 }
 .row-display {
     position:relative;
     display: flex;
     flex-direction: row;
     transition: transform 0.5s ease;
+
 }
 
 
@@ -83,10 +104,12 @@ export default {
     border-color: rgb(50, 50, 50);
     border-radius: 10px;
     background-color: rgb(36, 36, 36);
-    background-size: contain;
     box-shadow: 0 4px 6px rgba(150, 148, 148, 0.1);
     font-family: Arial, sans-serif;
-    transition: transform 0.2s
+    transition: transform 0.2s;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 80px 200px;
 }
 
 .row:hover {

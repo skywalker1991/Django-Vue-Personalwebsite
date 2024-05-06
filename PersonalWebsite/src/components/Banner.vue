@@ -82,13 +82,19 @@ export default {
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  margin-top: 60px;
+  margin-top: 200px;
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  background-color: #0d1116;
+  background-image: url('../assets/bannerback.png');
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .bannerbutton {

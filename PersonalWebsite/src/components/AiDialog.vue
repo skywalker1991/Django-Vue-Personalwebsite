@@ -1,7 +1,7 @@
 <template>
     <div class="dialog">
 
-      <el-card>
+      <el-card class="specialcard">
         <el-card-header>
           <span>与dAI对话</span>
         </el-card-header>
@@ -69,7 +69,7 @@ export default {
       async fetchAiData () {
 
         try {
-          const response = await fetch('http://127.0.0.1:8080/api/getanswer/',{
+          const response = await fetch('http://127.0.0.1:8082/api/getanswer/',{
             method:'POST',
             headers:{
               'Content-Type': 'application/json',
@@ -106,6 +106,12 @@ export default {
 
 
 <style>
+
+.specialcard {
+  background-color: rgba(255, 255, 255, 0.2)  !important; 
+  backdrop-filter: blur(15px) !important;
+
+}
 .dialog {
     position:fixed;
     top: 70px;
@@ -113,6 +119,8 @@ export default {
     width: 20vw;
     height:60vh;
     border-radius: 20px;
+
+ 
 }
 
 .chat-history {
