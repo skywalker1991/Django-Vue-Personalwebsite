@@ -3,37 +3,46 @@
         <component :is="currentComponent"></component>
 
     </div>
-    <Dialog v-show="store.DialogShow"/>
+    <Dialog v-show="dialogshow"/>
 
 
 </template>
 
 <script>
-import { store } from '../js/store.js'
+
 import HomePage from './HomePage.vue'
 import Dialog from './AiDialog.vue'
+import BlogPage from './Blog/BlogPage.vue'
+import BlogUpload from './Blog/BlogUpload.vue'
 
 export default {
     components:{
         HomePage,
         Dialog,
+        BlogPage,
+        BlogUpload
     },
     data () {
         return {
-            currentComponent:'HomePage',
-            store,
+            currentComponent:'HomePage', 
         }
     },
     computed : {
         currentComponent: function () {
-            switch (store.PageIndex) {
+            switch (this.$store.state.pageIndex) {
                 case 0:
                     return 'HomePage'
                 case 1:
                     return 'HomePage'
                 case 2:
                     return 'BlogPage'
+                case 4:
+                    return 'BlogUpload'
             }
+        },
+        dialogshow: function () {
+            return this.$store.state.dialogShow
+
         }
     }
 }
@@ -45,6 +54,7 @@ export default {
 .mainpage {
     position: relative;
     top: 60px;
+    background-color: #0d1116;
 
 }
 </style>

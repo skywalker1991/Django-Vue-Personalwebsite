@@ -25,11 +25,11 @@ export default {
         return {
             rowTitle:'Ability',
             rowData:[
-                {imgurl:'src/assets/radar.svg',title:'Military Background',des:'Served 7 years in both Cybersecurity and Intelligence Department of the CAF HQ.'},
-                {imgurl:'src/assets/security.svg',title:'Cyber Security',des:'Got bachelor degree in Cryptograph and master degree in Computer Science.'},
-                {imgurl:'src/assets/analysis.svg',title:'Data Analysis',des:'Proficient in utilizing statistical and machine learning algorithms to process, analyze, and visualize data.'},
-                {imgurl:'src/assets/github.svg',title:'Fullstack Development',des:'Proficient in full-stack development, capable of independently developing web systems and applications.'},
-                {imgurl:'src/assets/language.svg',title:'Bilingual Ability',des:'Strong English communication skills, proficient in English as a working language, with an IELTS score of 7.'},
+                {imgurl:'src/assets/radar.svg',title:'Military Background',des:''},
+                {imgurl:'src/assets/security.svg',title:'Cyber Security',des:''},
+                {imgurl:'src/assets/analysis.svg',title:'Data Analysis',des:''},
+                {imgurl:'src/assets/github.svg',title:'Fullstack Development',des:''},
+                {imgurl:'src/assets/language.svg',title:'Bilingual Ability',des:''},
             ],
             colTitle:'TimeLine',
             colData:[

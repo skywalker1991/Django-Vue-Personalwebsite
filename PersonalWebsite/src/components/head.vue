@@ -18,6 +18,8 @@
       <el-menu-item index="2-4">Project4</el-menu-item>
     </el-sub-menu>
 
+    <el-menu-item index="4">BlogUpload</el-menu-item>
+
     <div class="flex-grow"/>
     <SearchInput />
     <DarkMode />
@@ -29,7 +31,6 @@
   
 <script>
 
-import { store } from '../js/store.js'
 import SearchInput from "./Search_input.vue"
 import LoginSignin from "./LoginSignin.vue"
 import DarkMode from "./DarkMode.vue"
@@ -43,20 +44,23 @@ export default {
   data() {
     return {
       activeIndex:"1",
-      store,
     }
   },
   methods:{
     selectItem(index) {
       switch (index) {
         case '0':
-          this.store.PageIndex = 0;
+          this.$store.commit('setpageindex',0);
+          // this.store.PageIndex = 0;
           break;
         case '1':
-          this.store.PageIndex = 1;
+          this.$store.commit('setpageindex',1);
           break;
         case '2':
-          this.store.PageIndex = 2;
+          this.$store.commit('setpageindex',2);
+          break;
+        case '4':
+          this.$store.commit('setpageindex',4);
           break;
       }
       }

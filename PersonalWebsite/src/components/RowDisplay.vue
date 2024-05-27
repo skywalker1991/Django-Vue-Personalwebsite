@@ -3,9 +3,8 @@
         <div class="title-dis">
         <p>{{ rowTitle }}</p>
         <div class="content-control">
-            <p></p>
-            <el-icon @click="moveLeft"><Back /></el-icon>
-            <el-icon @click="moveRight"><Right /></el-icon>
+            <el-icon @click="moveLeft" class="arrowbutton"><ArrowLeftBold /></el-icon>
+            <el-icon @click="moveRight" class="arrowbutton"><ArrowRightBold /></el-icon>
         </div>
     </div>
 
@@ -119,13 +118,23 @@ export default {
 .content-control {
     display: flex;
     align-items: center;
+
 }
 
 .title-dis {
     font-size: 30px;
     margin-left: 50px;
+    margin-right: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
+.arrowbutton {
+    transition: buttontransform 0.2s
+}
+
+.arrowbutton:hover {
+    transform: scale(1.1);
+}
 </style>

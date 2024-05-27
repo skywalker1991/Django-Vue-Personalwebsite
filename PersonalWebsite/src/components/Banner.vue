@@ -18,12 +18,11 @@
 
 <script>
 import Typed from 'typed.js'
-import { store } from '../js/store.js'
+
 
 export default {
   data () {
     return {
-      store,
     }
   },
   mounted() {
@@ -42,10 +41,10 @@ export default {
   },
   methods:{
     openAiDialog () {
-      if (this.store.DialogShow == 1) {
-        this.store.DialogShow = 0
+      if (this.$store.state.dialogShow == 1) {
+        this.$store.commit('setdialogshow',0)
       }else {
-        this.store.DialogShow = 1
+        this.$store.commit('setdialogshow',1)
       }
     }
 
